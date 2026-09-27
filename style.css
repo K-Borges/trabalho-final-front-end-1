@@ -1,0 +1,195 @@
+/* ---------- Paleta de cores ---------- */
+:root {
+    --azul-escuro: #1e3a5f;
+    --azul-medio: #3b6ea5;
+    --azul-claro: #eaf2fb;
+    --texto: #1f2937;
+    --branco: #ffffff;
+}
+
+/* ---------- Reset básico (seletor universal) ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Elementos base ---------- */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--azul-escuro);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    margin: 10px 0 20px 30px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ---------- Cabeçalho, navegação e rodapé (mesmo tom escuro) ---------- */
+header,
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--branco);
+}
+
+.tagline {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+nav {
+    background-color: var(--azul-escuro);
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: var(--azul-claro);
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* ---------- Layout principal ---------- */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin: 20px auto 40px auto;
+    overflow: hidden;
+}
+
+/* Seletor de classe */
+.destaque {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+/* Seletor de ID agrupado */
+#sobre, #informacoes {
+    background-color: var(--azul-claro);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ---------- Imagens em destaque ---------- */
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figure img {
+    width: 320px;
+    height: auto;
+}
+
+figcaption {
+    font-size: 14px;
+    color: var(--azul-medio);
+    margin-top: 8px;
+}
+
+/* ---------- Tabela ---------- */
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--azul-medio);
+    padding: 10px;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+/* ---------- Article e Aside ---------- */
+article, aside {
+    background-color: var(--azul-claro);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto 40px auto;
+}
+
+/* ---------- Responsividade: telas menores ---------- */
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    section, article, aside {
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    figure img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .destaque {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 13px;
+    }
+}
